@@ -1,0 +1,36 @@
+@import "src/Root/vars";
+
+
+* {
+  margin: 0;
+  padding: 0;
+
+  outline: none;
+  list-style: none;
+  background: none;
+  border: none;
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  font-family: $font-family-default;
+  font-weight: 300;
+  font-size: $font-size-normal;
+  color: $color-black;
+}
+
+input, textarea, :global(._SELECTABLE), p {
+  -moz-user-select: text;
+  -o-user-select: text;
+  -khtml-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
