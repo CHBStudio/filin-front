@@ -1,0 +1,35 @@
+@import "src/Root/vars";
+
+
+.root{
+  display: block;
+}
+
+.topBar{
+  display: block;
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+.title {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  margin-right: $indent-normal;
+  vertical-align: top;
+  font-size: $font-size-giant;
+}
+
+.btn{
+  margin-top: 25px;
+}
+
+.container{
+  display: block;
+  position: relative;
+  height: auto;
+  text-align: center;
+  left: -$indent-normal;
+  width: calc(100% + #{$indent-normal * 2});
+}

@@ -28,7 +28,8 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "react-slick": "^0.18.1",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "yandex-map-react": "^1.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",

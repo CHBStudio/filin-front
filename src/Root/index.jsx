@@ -18,7 +18,7 @@ export default class extends Component{
       <Switch>
         <Route path={urls.landing} render={() => <Landing/>}/>
         <Redirect to={urls.landing}/>
-      </Switch> }
+      </Switch>
     </div>;
   }
 }

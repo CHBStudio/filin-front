@@ -1,0 +1,50 @@
+@import "src/Root/vars";
+
+
+.root{
+  display: inline-block;
+  position: relative;
+  width: calc(100%/3 - #{$indent-normal * 2});
+  margin: $indent-big $indent-normal 0 $indent-normal;
+  text-align: left;
+}
+
+.img{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+}
+
+.infoContainer{
+  display: block;
+  position: relative;
+  margin-top: $indent-normal;
+}
+
+.paramLine{
+  display: block;
+  position: relative;
+  height: auto;
+  width: 100%;
+  margin-top: $indent-small;
+  font-size: $font-size-normal-big;
+  text-align: left;
+
+  @include selectable;
+
+  b{
+    font-size: inherit;
+    font-weight: bold;
+
+    @include selectable;
+  }
+}
+
+.btn{
+  margin-top: $indent-normal;
+}

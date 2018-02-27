@@ -8,4 +8,6 @@
   font-family: $font-family-din;
   text-align: left;
   color: $color-black;
+
+  @include selectable;
 }

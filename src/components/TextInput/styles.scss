@@ -1,0 +1,18 @@
+@import "src/Root/vars";
+
+
+.root{
+  display: block;
+  position: relative;
+  height: $size-normal;
+  border-radius: calc(#{$size-normal}/2);
+  width: $input-width;
+  padding: 0 $indent-small;
+  line-height: $size-normal;
+  text-align: left;
+  font-size: $font-size-normal;
+  border: 1px solid $color-yellow;
+  color: $color-white;
+
+  transition: background-color $anim-normal;
+}

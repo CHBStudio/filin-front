@@ -1,4 +1,5 @@
 $color-yellow: #FFCB00;
+$color-yellow-hover: #FFB300;
 $color-black: #2B2B2B;
 $color-white: #FFFFFF;
 
@@ -6,10 +7,10 @@ $color-white: #FFFFFF;
 $anim-normal: .3s ease-out;
 
 
-$header-height: 70px;
+$header-height: 200px;
 
 
-$font-size-small: 14px;
+$font-size-small: 12px;
 $font-size-normal: 16px;
 $font-size-normal-big: 20px;
 $font-size-big: 40px;
@@ -34,8 +35,25 @@ $size-normal: 35px;
 $size-big: 50px;
 
 
+$indent-big: 100px;
+$indent-normal: 50px;
+$indent-small: 25px;
+
+
+$input-width: 300px;
+
+
 @mixin screen($max-width) {
     @media only screen and (max-width: $max-width) {
       @content
     }
+}
+
+@mixin selectable(){
+  -moz-user-select: text;
+  -o-user-select: text;
+  -khtml-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }

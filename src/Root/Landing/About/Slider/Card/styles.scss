@@ -1,0 +1,15 @@
+@import "src/Root/vars";
+
+
+.root{
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+}

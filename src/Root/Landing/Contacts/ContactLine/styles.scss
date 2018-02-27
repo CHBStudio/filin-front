@@ -1,0 +1,33 @@
+@import "src/Root/vars";
+
+
+.root{
+  display: block;
+  position: relative;
+  height: auto;
+  width: auto;
+  margin-bottom: $indent-small;
+}
+
+.btn{
+  display: inline-block;
+  position: relative;
+  width: $size-normal;
+  height: $size-normal;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  margin-right: $indent-small;
+  padding: 0;
+}
+
+.text{
+  display: inline-block;
+  position: relative;
+  width: auto;
+  font-size: $font-size-normal-big;
+  height: $size-normal;
+  line-height: $size-normal;
+
+  @include selectable;
+}

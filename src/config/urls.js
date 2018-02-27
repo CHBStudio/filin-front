@@ -4,9 +4,27 @@ export const root = '/';
 export const landing = '/landing';
 
 
+export const offers = '/offers';
+
+
+export const services = '/services';
+
+
+export const contacts = '/contacts';
+
+
 export default {
-    root,
+  root,
 
 
-    landing,
+  landing,
+
+
+  offers,
+
+
+  services,
+
+
+  contacts,
 }
