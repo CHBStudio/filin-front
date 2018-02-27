@@ -1,6 +1,5 @@
 import propTypes from 'prop-types';
 
-import Header from './Header';
 import About from './About';
 import Services from './Services';
 import Goods from './Goods';
@@ -22,7 +21,6 @@ export default class extends Component{
 
   render(){
     return <div className={styles.root}>
-      <Header/>
       <div className={styles.screensContainer}>
         <About/>
         <Services/>

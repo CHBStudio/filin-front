@@ -1,0 +1,62 @@
+@import "src/Root/vars";
+
+
+.root{
+  display: block;
+  position: relative;
+  height: auto;
+  width: 80%;
+  min-width: calc(#{$page-width-desktop-min} - #{$indent-big * 2});
+  margin: $indent-big  auto 0 auto;
+  max-width: 1000px;
+}
+
+.img{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #ccc;
+}
+
+.info{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-left: calc(50% + #{$indent-normal});
+}
+
+.title {
+  margin-bottom: $indent-normal;
+
+  @include selectable;
+}
+
+.params{
+  display: block;
+  position: relative;
+}
+
+.param{
+  display: block;
+  position: relative;
+  font-size: $font-size-normal-big;
+  margin-top: $indent-small;
+
+  @include selectable;
+
+  b{
+    font-weight: bold;
+    font-size: $font-size-normal-big;
+    margin-left: $indent-micro;
+
+    @include selectable;
+  }
+}
+
+.btn{
+  margin-top: $indent-normal;
+}
