@@ -1,0 +1,30 @@
+@import "src/Root/vars";
+
+
+.root{
+  display: inline-block;
+  position: relative;
+  width: auto;
+  height: auto;
+  border: 2px solid $color-yellow;
+  border-radius: calc(#{$size-normal});
+  overflow: hidden;
+}
+
+.section{
+  display: inline-block;
+  position: relative;
+  border-right: 2px solid $color-yellow;
+  height: $size-normal;
+  padding: 0 $indent-small;
+  text-align: center;
+  cursor: pointer;
+  font-size: $font-size-normal;
+  color: $color-black;
+  background-color: $color-white;
+  line-height: $size-normal;
+
+  &:last-of-type{
+    border-right: none;
+  }
+}

@@ -1,0 +1,48 @@
+@import "src/Root/vars";
+
+
+.root{
+  display: block;
+  position: relative;
+}
+
+.title{
+  display: block;
+  position: relative;
+  text-align: center;
+  font-size: $font-size-giant;
+}
+
+.topControls {
+  display: block;
+  position: relative;
+  margin-top: $indent-normal;
+  text-align: center;
+}
+
+.sides{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: $indent-normal;
+}
+
+.leftSide{
+  display: inline-block;
+  position: relative;
+  width: calc(100% - #{$right-bar-width + $indent-small});
+  vertical-align: top;
+  margin-right: $indent-small;
+
+  background-color: red;
+}
+
+.rightSide{
+  display: inline-block;
+  position: relative;
+  width: $right-bar-width;
+  vertical-align: top;
+
+  background-color: green;
+}

@@ -5,6 +5,7 @@ import urls from 'config/urls';
 import Header from './Header';
 import Landing from './Landing';
 import Offers from './Offers';
+import Services from './Services';
 
 import styles from './styles.scss';
 
@@ -21,6 +22,7 @@ export default class extends Component{
       <Switch>
         <Route path={urls.landing} render={() => <Landing/>}/>
         <Route path={urls.offers} render={() => <Offers/>}/>
+        <Route path={urls.ps} render={() => <Services/>}/>
         <Redirect to={urls.landing}/>
       </Switch>
     </div>;

@@ -1,4 +1,5 @@
 import Title from 'components/Title';
+import FirstScreenContainer from 'components/FirstScreenContainer';
 
 import Offer from './Offer';
 
@@ -11,7 +12,7 @@ export default class extends Component{
   }
 
   render(){
-    return <div className={styles.root}>
+    return <FirstScreenContainer className={styles.root}>
       <Title className={styles.title}>Арендаторам</Title>
       <div className={styles.container}>
         <Offer
@@ -43,6 +44,6 @@ export default class extends Component{
           block="2"
         />
       </div>
-    </div>
+    </FirstScreenContainer>
   }
 }
