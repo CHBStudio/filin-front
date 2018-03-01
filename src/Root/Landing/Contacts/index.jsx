@@ -14,8 +14,6 @@ import styles from './styles.scss';
 
 export default () => {
   const mapState = {
-    center: [55.76, 37.64],
-    zoom: 10,
     controls: ['zoomControl', ]
   };
 
@@ -29,7 +27,7 @@ export default () => {
     </div>
 
     <div className={styles.mapWrapper}>
-      <Map ref={ref => ref && ref.behaviors.disable('scrollZoom') } scroll={false} state={mapState} width='100%' height="100%" onAPIAvailable={function () { console.log('API loaded'); }} center={[55.754734, 37.583314]} zoom={18}>
+      <Map state={mapState} width='100%' height="100%" onMapAvailable={ref => console.warn(ref.behaviors.disable('scrollZoom'))} center={[55.754734, 37.583314]} zoom={18}>
         <Marker lat={55.754734} lon={37.583314} />
       </Map>
     </div>
