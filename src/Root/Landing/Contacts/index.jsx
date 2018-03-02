@@ -33,4 +33,3 @@ export default () => {
     </div>
   </BaseScreen>
 }
-// <Map ref={ref => { console.warn(ref); return ref && ref.behaviors.disable('scrollZoom');} } state={mapState} width='100%' height="100%" onAPIAvailable={function () { console.log('API loaded'); }} center={[55.754734, 37.583314]} zoom={18}>

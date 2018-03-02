@@ -14,6 +14,9 @@
 .img{
   display: block;
   position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   top: 0;
   left: 0;
   width: 50%;
@@ -43,7 +46,7 @@
 .param{
   display: block;
   position: relative;
-  font-size: $font-size-normal-big;
+  font-size: $font-size-normal;
   margin-top: $indent-small;
 
   @include selectable;
