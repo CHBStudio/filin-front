@@ -10,7 +10,11 @@ const createConnectedActions = (entitiesToAction, dispatch) => {
   return connectedActions;
 };
 
-const createStore = (store) => {
+const createStore = (entitiesToAction) => (allStore) => {
+  const store = {};
+  Object.keys(entitiesToAction).forEach(entityKey => {
+    store[entityKey] = allStore[entityKey];
+  });
   return { store };
 };
 
@@ -20,5 +24,5 @@ const createActions = (entitiesToAction) => (dispatch) => {
 };
 
 export default (entitiesToAction={}) => (component) => {
-  return connect(createStore, createActions(entitiesToAction), null, { pure:false })(component);
+  return connect(createStore(entitiesToAction), createActions(entitiesToAction), null, { pure:false })(component);
 }

@@ -17,7 +17,6 @@ import Filters from './Filters';
 import styles from './styles.scss';
 
 
-
 @connect({ productsServices })
 class ProductsServices extends Component{
 
@@ -32,15 +31,13 @@ class ProductsServices extends Component{
 
     this.state = {
       items: [],
-
-      isLoadingFilters: false,
-      isLoadingItems: false,
+      isLoading: false,
     };
   }
 
   componentWillMount(){
     this.updateItems();
-    this.updateFilters();
+    this.props.actions.productsServices.loadFilters();
   }
 
   componentWillReceiveProps(nextProps){
@@ -53,7 +50,7 @@ class ProductsServices extends Component{
   }
 
   updateItems = async () => {
-    this.setState({ isLoadingItems: true });
+    this.setState({ isLoading: true });
 
     const { type, filter } = this.props;
 
@@ -70,22 +67,7 @@ class ProductsServices extends Component{
     }
 
     if(response){
-      this.setState({ isLoadingItems: false, items: response.data.data });
-      return;
-    }
-  };
-
-  updateFilters = async () => {
-    this.setState({ isLoadingFilters: true });
-
-    const { response, error } = await request(api.getProductsServicesFilters, 'GET');
-
-    if(response){
-      const { product_types, service_types } = response.data;
-      this.props.actions.productsServices.setProductsFilters(product_types);
-      this.props.actions.productsServices.setServicesFilters(service_types);
-
-      this.setState({ isLoadingFilters: false });
+      this.setState({ isLoading: false, items: response.data.data });
       return;
     }
   };
@@ -105,10 +87,24 @@ class ProductsServices extends Component{
   render(){
     const { type, filter } = this.props;
 
-    const { items, isLoadingFilters, isLoadingItems } = this.state;
+    const { items, isLoading } = this.state;
 
-    const isLoading = false;
-    // isLoadingFilters || isLoadingItems;
+    const isLoadingFilters = this.props.store.productsServices.status === 'loading';
+    const isErrorFilters = this.props.store.productsServices.status === 'error';
+
+    if(isLoadingFilters){
+      return <FirstScreenContainer>
+        <Title className={styles.title}>Товары и услуги</Title>
+        <Spinner className={styles.spinner}/>
+      </FirstScreenContainer>;
+    }
+
+    if(isErrorFilters){
+      return <FirstScreenContainer>
+        <Title className={styles.title}>Товары и услуги</Title>
+        <div className={styles.error}>Кажется что-то пошло не так ...</div>
+      </FirstScreenContainer>;
+    }
 
     return <FirstScreenContainer>
       <Title className={styles.title}>Товары и услуги</Title>

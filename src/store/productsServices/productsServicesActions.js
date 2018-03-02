@@ -1,27 +1,35 @@
-export const PRODUCTS_SERVICES__SET_PRODUCTS_FILTERS = 'PRODUCTS_SERVICES___SET_PRODUCTS_FILTERS';
-export const PRODUCTS_SERVICES__SET_SERVICES_FILTERS= 'PRODUCTS_SERVICES___SET_SERVICES_FILTERS';
+export const PRODUCTS_SERVICES__SET_FILTERS = 'PRODUCTS_SERVICES__SET_FILTERS';
+export const PRODUCTS_SERVICES__SET_FILTERS_LOAD_STATUS = 'PRODUCTS_SERVICES__FILTERS_LOAD_STATUS';
+export const PRODUCTS_SERVICES__LOAD_FILTERS = 'PRODUCTS_SERVICES__LOAD_FILTERS';
 
 
-export const setProductsFilters = (filters) => ({
-  type: PRODUCTS_SERVICES__SET_PRODUCTS_FILTERS,
-  filters,
+export const setFiltersLoadStatus = (status) => ({
+  type: PRODUCTS_SERVICES__SET_FILTERS_LOAD_STATUS,
+  status,
 });
 
-export const setServicesFilters = (filters) => ({
-  type: PRODUCTS_SERVICES__SET_SERVICES_FILTERS,
-  filters,
+export const setFilters = (productFilters, serviceFilters) => ({
+  type: PRODUCTS_SERVICES__SET_FILTERS,
+  productFilters,
+  serviceFilters,
+});
+
+export const loadFilters = () => ({
+  type: PRODUCTS_SERVICES__LOAD_FILTERS,
 });
 
 
 const actions = {
-  setProductsFilters,
-  setServicesFilters,
+  setFilters,
+  setFiltersLoadStatus,
+  loadFilters,
 };
 
 
 export default {
-  PRODUCTS_SERVICES__SET_PRODUCTS_FILTERS,
-  PRODUCTS_SERVICES__SET_SERVICES_FILTERS,
+  PRODUCTS_SERVICES__SET_FILTERS,
+  PRODUCTS_SERVICES__SET_FILTERS_LOAD_STATUS,
+  PRODUCTS_SERVICES__LOAD_FILTERS,
 
   actions,
 }

@@ -4,20 +4,22 @@ import actions from './productsServicesActions';
 
 
 const initialState = {
+  status: null,
   productsFilters: [],
   servicesFilters: [],
 };
 
 const actionsMap = {
-  [actions.PRODUCTS_SERVICES__SET_PRODUCTS_FILTERS]: (state, { filters }) => {
+  [actions.PRODUCTS_SERVICES__SET_FILTERS]: (state, { productFilters, serviceFilters }) => {
     return update(state, {
-      productsFilters: { $set: filters },
+      productsFilters: { $set: productFilters },
+      servicesFilters: { $set: serviceFilters }
     });
   },
 
-  [actions.PRODUCTS_SERVICES__SET_SERVICES_FILTERS]: (state, { filters }) => {
+  [actions.PRODUCTS_SERVICES__SET_FILTERS_LOAD_STATUS]: (state, { status }) => {
     return update(state, {
-      servicesFilters: { $set: filters },
+      status: { $set: status },
     });
   },
 };
