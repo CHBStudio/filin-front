@@ -4,9 +4,9 @@ import Title from 'components/Title';
 import styles from './styles.scss';
 
 
-export default ({ area, floor, type, cost, block }) => {
+export default ({ img, area, floor, type, cost, block }) => {
   return <div className={styles.root}>
-    <div className={styles.img}/>
+    <div className={styles.img} style={{backgroundImage: `url(${img})`}}/>
     <div className={styles.info}>
       <Title className={styles.title}>{ area } м2, { floor } этаж</Title>
       <div className={styles.params}>
@@ -22,9 +22,9 @@ export default ({ area, floor, type, cost, block }) => {
         <span className={styles.param}>
           Этаж: <b>{ floor }</b>
         </span>
-        <span className={styles.param}>
-          Корпус: <b>{ block }</b>
-        </span>
+        { block && <span className={styles.param}>
+            Корпус: <b>{ block }</b>
+          </span>}
       </div>
       <Button className={styles.btn}>Фотографии</Button>
     </div>
