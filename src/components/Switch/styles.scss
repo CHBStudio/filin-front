@@ -24,7 +24,13 @@
   background-color: $color-white;
   line-height: $size-normal;
 
+  transition: background-color $anim-normal;
+
   &:last-of-type{
     border-right: none;
+  }
+
+  &Active{
+    background-color: $color-yellow;
   }
 }

@@ -5,11 +5,13 @@ import urls from 'config/urls';
 import styles from './styles.scss';
 
 
-export default ({ typeId, children }) => {
+export default ({ filterId, children, type }) => {
+  const url = type === 'products' ? urls.psProducts(filterId) : urls.psServices(filterId);
+
   return <NavLink
     className={styles.root}
     activeClassName={styles.rootActive}
-    to={'/'}
+    to={url}
   >
     { children }
   </NavLink>

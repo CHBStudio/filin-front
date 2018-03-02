@@ -20,12 +20,19 @@
   text-align: center;
 }
 
+.container{
+  display: block;
+  position: relative;
+  height: auto;
+  margin-top: $indent-normal;
+  width: 100%;
+}
+
 .sides{
   display: block;
   position: relative;
   width: 100%;
   height: auto;
-  margin-top: $indent-normal;
 }
 
 .leftSide{
@@ -43,6 +50,20 @@
   position: relative;
   width: $right-bar-width;
   vertical-align: top;
+}
 
-  background-color: green;
+.spinner{
+  display: block;
+  position: absolute;
+  top: $indent-big;
+  height: $size-big;
+  width: $size-big;
+  left: calc(50% - #{$size-big / 2});
+
+  transition: opacity $anim-normal, pointer-events $anim-normal;
+
+  &Hidden{
+    opacity: 0;
+    pointer-events: none;
+  }
 }

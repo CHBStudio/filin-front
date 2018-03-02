@@ -1,23 +1,23 @@
 import { combineReducers } from 'redux';
 
-import user from './user';
+import productsServices from './productsServices';
 
 
 const reducers = combineReducers({
-  user: user.reducers,
+  productsServices: productsServices.reducers,
 });
 
 const sagas = [].concat(
-  user.sagas,
+  productsServices.sagas,
 );
 
 const actions = {
-  user: user.actions,
+  productsServices: productsServices.actions,
 };
 
 
 export {
-  user,
+  productsServices,
 };
 
 export default {
