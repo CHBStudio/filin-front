@@ -11,6 +11,10 @@
   position: relative;
   text-align: center;
   font-size: $font-size-giant;
+
+  @include mobile{
+    font-size: $font-size-big;
+  }
 }
 
 .topControls {
@@ -28,6 +32,12 @@
   width: 80%;
   max-width: $list-max-width;
   min-width: calc(#{$page-width-desktop-min} - #{$indent-big * 2});
+
+  @include mobile{
+    width: 100%;
+    max-width: 0;
+    min-width: 100%;
+  }
 }
 
 .sides{
@@ -43,6 +53,12 @@
   width: calc(100% - #{$right-bar-width + $indent-big});
   vertical-align: top;
   margin-right: $indent-big;
+
+  @include mobile{
+    display: block;
+    margin-right: 0;
+    width: 100%;
+  }
 }
 
 .rightSide{

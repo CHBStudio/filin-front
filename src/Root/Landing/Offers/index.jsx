@@ -47,12 +47,6 @@ export default class extends Component{
             key={index}
           />
         }) }
-        { window.__IS_MOBILE__ && <Button
-          className={styles.btn}
-          onClick={() => history.push(urls.offers)}
-        >
-          Все предложения
-        </Button> }
       </div> }
     </BaseScreen>
   }

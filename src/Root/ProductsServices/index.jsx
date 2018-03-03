@@ -122,12 +122,12 @@ class ProductsServices extends Component{
             }) }
             { !isLoading && items.length === 0 && <span className={styles.emptyStub}>Ничего не найдено, попробуйте другие категорию</span> }
           </div>
-          <div className={styles.rightSide}>
+          { !window.__IS_MOBILE__ && <div className={styles.rightSide}>
             <Filters
               type={type}
               filters={filters}
             />
-          </div>
+          </div> }
         </div>
       </div> }
     </FirstScreenContainer>;

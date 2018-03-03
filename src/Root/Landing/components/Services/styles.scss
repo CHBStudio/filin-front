@@ -23,6 +23,11 @@
 
 .btn{
   margin-top: 25px;
+
+  @include mobile{
+    height: $size-big;
+    line-height: $size-big;
+  }
 }
 
 .container{

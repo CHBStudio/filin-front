@@ -9,6 +9,10 @@
   &:last-of-type{
     margin-bottom: 0;
   }
+
+  @include mobile{
+    margin-bottom: $indent-normal;
+  }
 }
 
 
@@ -16,6 +20,10 @@
   display: block;
   position: relative;
   font-size: $font-size-big;
+
+  @include mobile{
+    text-align: center;
+  }
 }
 
 

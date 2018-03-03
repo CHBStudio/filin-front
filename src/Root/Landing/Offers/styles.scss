@@ -14,6 +14,12 @@
 
 .btn{
   margin-top: 25px;
+
+  @include mobile{
+    height: $size-big;
+    line-height: $size-big;
+    margin-top: 0;
+  }
 }
 
 .text{

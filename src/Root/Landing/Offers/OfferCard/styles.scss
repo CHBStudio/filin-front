@@ -16,8 +16,7 @@
   @include mobile{
     left: 0;
     width: 100%;
-    margin: $indent-normal 0;
-    text-align: center;
+    margin: $indent-normal 0 0 0;
   }
 }
 
@@ -30,6 +29,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
+
+  @include mobile{
+    left: 0;
+    width: 100%;
+  }
 }
 
 .infoContainer{
@@ -54,10 +58,6 @@
     font-weight: bold;
 
     @include selectable;
-  }
-
-  @include mobile{
-    text-align: center;
   }
 }
 
