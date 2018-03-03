@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import { Switch, Route, Redirect, Link } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import urls from 'config/urls';
 import history from 'utils/history';
@@ -13,6 +13,7 @@ import request from 'utils/request';
 import Spinner from 'components/Spinner';
 
 import Filters from './Filters';
+import Floor from './Floor';
 
 import styles from './styles.scss';
 
@@ -36,23 +37,23 @@ class ProductsServices extends Component{
   }
 
   componentWillMount(){
-    this.updateItems();
-    this.props.actions.productsServices.loadFilters();
+    const { type, filter } = this.props;
+    const { status } = this.props.store.productsServices;
+    if(status === null || status === 'error'){
+      this.props.actions.productsServices.loadFilters();
+    }
+
+    this.updateItems(type, filter);
   }
 
   componentWillReceiveProps(nextProps){
-    if(
-      nextProps.type !== this.props.type ||
-      ( nextProps.type === this.props.type && nextProps.filter !== this.props.filter )
-    ){
-      this.updateItems();
+    if(nextProps.type !== this.props.type || nextProps.filter !== this.props.filter){
+      this.updateItems(nextProps.type, nextProps.filter);
     }
   }
 
-  updateItems = async () => {
+  updateItems = async (type, filter) => {
     this.setState({ isLoading: true });
-
-    const { type, filter } = this.props;
 
     const apiUrl = type === 'products' ? api.getProducts : api.getServices;
 
@@ -85,56 +86,49 @@ class ProductsServices extends Component{
   };
 
   render(){
-    const { type, filter } = this.props;
+    const { type, store } = this.props;
+    const { productsServices } = store;
+    const { productsFilters, servicesFilters } = productsServices;
+
+    const filters = type === 'products' ? productsFilters : servicesFilters;
 
     const { items, isLoading } = this.state;
 
-    const isLoadingFilters = this.props.store.productsServices.status === 'loading';
-    const isErrorFilters = this.props.store.productsServices.status === 'error';
-
-    if(isLoadingFilters){
-      return <FirstScreenContainer>
-        <Title className={styles.title}>Товары и услуги</Title>
-        <Spinner className={styles.spinner}/>
-      </FirstScreenContainer>;
-    }
-
-    if(isErrorFilters){
-      return <FirstScreenContainer>
-        <Title className={styles.title}>Товары и услуги</Title>
-        <div className={styles.error}>Кажется что-то пошло не так ...</div>
-      </FirstScreenContainer>;
-    }
+    const isLoadingFilters = productsServices.status === 'loading';
+    const isErrorFilters = productsServices.status === 'error';
+    const isLoadedFilters = productsServices.status === 'loaded';
 
     return <FirstScreenContainer>
       <Title className={styles.title}>Товары и услуги</Title>
-      <div className={styles.topControls}>
+
+      { isErrorFilters && <div className={styles.error}>Кажется что-то пошло не так ...</div> }
+
+      { isLoadingFilters && <Spinner className={styles.spinner}/> }
+
+      { isLoadedFilters && <div className={styles.topControls}>
         <SwitchComponent
           sections={['Товары', 'Услуги',]}
           onChange={this.onSwitchClick}
           activeIndex={this.props.activeIndex}
         />
-      </div>
-      <div className={styles.container}>
-        { !isLoading && <div className={styles.sides}>
+      </div> }
+
+      { isLoadedFilters && <div className={styles.container}>
+        <div className={styles.sides}>
           <div className={styles.leftSide}>
-            left
+            { isLoading && <Spinner className={styles.spinner}/> }
+            { !isLoading && items.map((floorData, index) => {
+              return <Floor data={floorData} key={index}/>;
+            }) }
           </div>
           <div className={styles.rightSide}>
             <Filters
               type={type}
-              filters={[
-                { id: 'all', name: 'Все' },
-                { id: '1', name: 'Шины' },
-                { id: '2', name: 'Стекла' },
-                { id: '3', name: 'Двери' },
-                { id: '4', name: 'Мука' },
-              ]}
+              filters={filters}
             />
           </div>
-        </div> }
-        <Spinner className={cn(styles.spinner, !isLoading && styles.spinnerHidden)}/>
-      </div>
+        </div>
+      </div> }
     </FirstScreenContainer>;
   }
 }

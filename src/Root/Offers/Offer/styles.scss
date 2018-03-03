@@ -8,7 +8,7 @@
   width: 80%;
   min-width: calc(#{$page-width-desktop-min} - #{$indent-big * 2});
   margin: $indent-big  auto 0 auto;
-  max-width: 1000px;
+  max-width: $list-max-width;
 }
 
 .img{
@@ -46,7 +46,7 @@
 .param{
   display: block;
   position: relative;
-  font-size: $font-size-normal;
+  font-size: $font-size-normal-big;
   margin-top: $indent-small;
 
   @include selectable;

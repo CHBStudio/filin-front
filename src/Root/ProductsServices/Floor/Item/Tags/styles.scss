@@ -1,0 +1,22 @@
+@import "src/Root/vars";
+
+
+.root{
+  display: block;
+  position: relative;
+}
+
+.tag{
+  display: inline-block;
+  position: relative;
+  margin-top: $indent-micro;
+  margin-right: $indent-micro;
+  padding: calc(#{$indent-micro}/2) $indent-micro;
+  background-color: $color-white;
+  min-height: $size-small;
+  color: $color-black;
+  border-radius: $border-radius;
+  font-size: $font-size-small;
+
+  @include selectable;
+}

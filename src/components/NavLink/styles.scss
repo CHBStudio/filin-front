@@ -18,11 +18,10 @@
   }
 
   &:hover{
-    color: $color-yellow-hover;
+    color: $color-white;
   }
-}
 
-
-.rootActive{
-  color: #fff;
+  &Active{
+    color: $color-white;
+  }
 }

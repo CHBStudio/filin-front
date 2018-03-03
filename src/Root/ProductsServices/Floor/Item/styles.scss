@@ -1,0 +1,45 @@
+@import "src/Root/vars";
+
+
+.root{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: $indent-small;
+  background-color: $color-black;
+  padding: $indent-small;
+  border-radius: $border-radius;
+}
+
+.title{
+  font-size: $font-size-big;
+  color: $color-yellow;
+}
+
+.text{
+  display: block;
+  position: relative;
+  margin-top: $indent-small-normal;
+  margin-bottom: $indent-micro;
+  font-size: $font-size-normal-big;
+  color: $color-white;
+}
+
+.params{
+  display: block;
+  position: relative;
+  height: auto;
+  width: 100%;
+  margin-top: $indent-small-normal;
+}
+
+.phone,
+.link{
+  display: inline-block;
+  position: relative;
+  color: $color-yellow;
+  font-size: $font-size-normal;
+  vertical-align: top;
+  cursor: pointer;
+}

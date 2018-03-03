@@ -6,6 +6,7 @@ import actions, { setFilters, setFiltersLoadStatus } from './productsServicesAct
 
 
 const loadFiltersSaga = saga(async (store, action, dispatch) => {
+  dispatch(setFiltersLoadStatus('loading'));
 
   const { response, error } = await request(api.getProductsServicesFilters, 'GET');
 

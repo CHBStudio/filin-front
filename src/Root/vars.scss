@@ -31,12 +31,19 @@ $font-family-default: -apple-system,
 $page-width-desktop-min: 960px;
 
 
+
+$size-small: 25px;
 $size-normal: 35px;
 $size-big: 50px;
 
 
+$border-radius: 5px;
+
+
 $indent-big: 100px;
+$indent-normal-big: 75px;
 $indent-normal: 50px;
+$indent-small-normal: 30px;
 $indent-small: 25px;
 $indent-micro: 10px;
 
@@ -45,6 +52,8 @@ $indent-micro: 10px;
 $input-width: 300px;
 
 $right-bar-width: 250px;
+
+$list-max-width: 1000px;
 
 
 @mixin screen($max-width) {

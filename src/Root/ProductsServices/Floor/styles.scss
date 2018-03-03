@@ -1,0 +1,26 @@
+@import "src/Root/vars";
+
+
+.root{
+  display: block;
+  position: relative;
+  margin-bottom: $indent-normal-big;
+
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+}
+
+
+.title{
+  display: block;
+  position: relative;
+  font-size: $font-size-big;
+}
+
+
+.container{
+  display: block;
+  position: relative;
+  width: 100%;
+}

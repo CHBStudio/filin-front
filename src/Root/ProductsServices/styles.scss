@@ -24,8 +24,10 @@
   display: block;
   position: relative;
   height: auto;
-  margin-top: $indent-normal;
-  width: 100%;
+  margin: $indent-normal auto 0 auto;
+  width: 80%;
+  max-width: $list-max-width;
+  min-width: calc(#{$page-width-desktop-min} - #{$indent-big * 2});
 }
 
 .sides{
@@ -38,11 +40,9 @@
 .leftSide{
   display: inline-block;
   position: relative;
-  width: calc(100% - #{$right-bar-width + $indent-small});
+  width: calc(100% - #{$right-bar-width + $indent-big});
   vertical-align: top;
-  margin-right: $indent-small;
-
-  background-color: red;
+  margin-right: $indent-big;
 }
 
 .rightSide{
@@ -60,11 +60,6 @@
   margin: $indent-big auto;
 
   transition: opacity $anim-normal, pointer-events $anim-normal;
-
-  &Hidden{
-    opacity: 0;
-    pointer-events: none;
-  }
 }
 
 .error{
