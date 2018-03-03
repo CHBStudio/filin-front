@@ -21,6 +21,7 @@ html, body, :global(#root) {
 
 :global(.__IS_MOBILE__){
   min-width: 0;
+  min-height: 0;
 }
 
 

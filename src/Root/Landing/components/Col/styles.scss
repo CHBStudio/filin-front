@@ -6,6 +6,12 @@
   position: relative;
   width: calc(100%/3 - #{$indent-normal * 2});
   margin: $indent-big $indent-normal 0 $indent-normal;
+
+  @include mobile{
+    display: block;
+    width: 100%;
+    margin: $indent-normal 0 0 0;
+  }
 }
 
 .img{

@@ -45,6 +45,7 @@ export default class extends Component{
           testImgUrl,
           testImgUrl,
         ]}
+        cardClassName={styles.sliderCard}
       />
       <Description/>
     </BaseScreen>

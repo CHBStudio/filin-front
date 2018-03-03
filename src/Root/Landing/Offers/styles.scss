@@ -31,4 +31,9 @@
     left: -$indent-small;
     width: calc(100% + #{$indent-small * 2});
   }
+
+  @include mobile{
+    left: 0;
+    width: 100%;
+  }
 }

@@ -32,4 +32,9 @@
   text-align: center;
   left: -$indent-normal;
   width: calc(100% + #{$indent-normal * 2});
+
+  @include mobile{
+    left: 0;
+    width: 100%;
+  }
 }

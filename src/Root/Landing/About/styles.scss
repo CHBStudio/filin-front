@@ -3,4 +3,15 @@
 
 .root{
   padding: $header-height 0 0 0;
+
+  @include mobile{
+    padding: 0;
+  }
+}
+
+.sliderCard{
+
+  @include mobile{
+    height: 300px;
+  }
 }

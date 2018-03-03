@@ -9,6 +9,10 @@
   @include width(1200px){
     padding: $indent-normal;
   }
+
+  @include mobile{
+    padding: $indent-small;
+  }
 }
 
 .title{
@@ -17,6 +21,10 @@
   width: 100%;
   margin-bottom: $indent-normal;
   font-size: $font-size-giant;
+
+  @include mobile{
+    margin-bottom: $indent-small;
+  }
 }
 
 .text{

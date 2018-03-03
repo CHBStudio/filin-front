@@ -8,6 +8,13 @@
   width: 350px;
   height: auto;
   left: calc(50% - 350px/2);
+
+  @include mobile{
+    position: relative;
+    top: auto;
+    width: 100%;
+    left: auto;
+  }
 }
 
 
@@ -22,6 +29,12 @@
   background-size: contain;
   background-color: transparent;
   margin: 0 auto $indent-small auto;
+
+  @include mobile{
+    margin: 0 auto;
+    width: 65px;
+    height: 40px;
+  }
 }
 
 

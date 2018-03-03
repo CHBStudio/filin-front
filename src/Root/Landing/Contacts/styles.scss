@@ -4,6 +4,10 @@
 .root{
   display: block;
   padding-bottom: 0;
+
+  @include mobile{
+    padding-bottom: 0;
+  }
 }
 
 
@@ -15,6 +19,10 @@
   margin: $indent-normal 0;
 
   @include selectable;
+
+  @include mobile{
+    margin: $indent-small 0;
+  }
 }
 
 .infoContainer{
@@ -31,4 +39,9 @@
   width: calc(100% + #{$indent-big * 2});
   height: 500px;
   margin-top: $indent-normal;
+
+  @include mobile{
+    left: -$indent-small;
+    width: calc(100% + #{$indent-small * 2});
+  }
 }

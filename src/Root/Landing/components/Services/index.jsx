@@ -13,12 +13,13 @@ export default ({ data, title, linkTo, buttonText }) => {
 
     <div className={styles.topBar}>
       <Title className={styles.title}>{title}</Title>
-      <Button
+      { window.__IS_MOBILE__ && <br/> }
+      { !window.__IS_MOBILE__ && <Button
         className={styles.btn}
         onClick={() => history.push(linkTo)}
       >
         { buttonText }
-      </Button>
+      </Button> }
     </div>
 
     <div className={styles.container}>
@@ -30,6 +31,12 @@ export default ({ data, title, linkTo, buttonText }) => {
           text={colData.text}
         />
       }) }
+      { window.__IS_MOBILE__ && <Button
+        className={styles.btn}
+        onClick={() => history.push(linkTo)}
+      >
+        { buttonText }
+      </Button> }
     </div>
   </BaseScreen>
 }

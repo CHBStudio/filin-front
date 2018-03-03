@@ -7,8 +7,8 @@ import styles from './styles.scss';
 
 export default () => {
   return <div className={styles.root}>
-    <Links/>
     <Main/>
-    <Contacts/>
+    <Links/>
+    { !window.__IS_MOBILE__ && <Contacts/> }
   </div>
 }

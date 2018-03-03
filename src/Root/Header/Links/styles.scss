@@ -12,11 +12,26 @@
   @include width(1000px){
     right: $indent-small;
   }
+
+  @include mobile{
+    display: block;
+    position: relative;
+    width: 100%;
+    top: auto;
+    right: auto;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 .link{
   @include width(1160px){
     font-size: $font-size-small;
     margin-right: $indent-small;
+  }
+
+  @include mobile{
+    font-size: $font-size-normal;
+    margin: $indent-micro $indent-micro 0 $indent-micro;
   }
 }

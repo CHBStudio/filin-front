@@ -12,6 +12,13 @@
     width: calc(100%/3 - #{$indent-small * 2});
     margin: $indent-big $indent-small 0 $indent-small;
   }
+
+  @include mobile{
+    left: 0;
+    width: 100%;
+    margin: $indent-normal 0;
+    text-align: center;
+  }
 }
 
 .img{
@@ -47,6 +54,10 @@
     font-weight: bold;
 
     @include selectable;
+  }
+
+  @include mobile{
+    text-align: center;
   }
 }
 
