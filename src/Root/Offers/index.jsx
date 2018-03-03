@@ -19,13 +19,13 @@ export default class extends Component{
   }
 
   openModalPhotos = (offerData) => () => {
-    offerData.photos = [
-      'https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?h=350&dpr=2&auto=compress&cs=tinysrgb',
-      'https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb',
-      'https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb',
-      'https://images.pexels.com/photos/36753/flower-purple-lical-blosso.jpg?h=350&dpr=2&auto=compress&cs=tinysrgb',
-      'https://images.pexels.com/photos/64272/blossom-bloom-flower-red-64272.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb',
-    ];
+    // offerData.photos = [
+    //   'https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?h=350&dpr=2&auto=compress&cs=tinysrgb',
+    //   'https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb',
+    //   'https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb',
+    //   'https://images.pexels.com/photos/36753/flower-purple-lical-blosso.jpg?h=350&dpr=2&auto=compress&cs=tinysrgb',
+    //   'https://images.pexels.com/photos/64272/blossom-bloom-flower-red-64272.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb',
+    // ];
 
     this.props.actions.modals.setData('modal-photos', offerData);
     this.props.actions.modals.open('modal-photos');
@@ -55,7 +55,7 @@ export default class extends Component{
       <div className={styles.container}>
         { offers.data.map((offer, index) => <Offer
           key={index}
-          img={`/${offer.photo}`}
+          img={offer.main_photo}
           area={offer.square}
           floor={offer.floor}
           type={offer.function}

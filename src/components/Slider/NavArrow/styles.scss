@@ -14,11 +14,11 @@
 }
 
 .rootLeft{
-  left: $indent-big;
+  right: $indent-big;
 }
 
 .rootRight{
-  right: $indent-big;
+  left: $indent-big;
 }
 
 
@@ -36,11 +36,11 @@
 }
 
 .iconLeft{
-  left: -1px;
-  transform: rotate(180deg);
+  left: 1px;
+  transform: rotate(0);
 }
 
 .iconRight{
-  right: -1px;
-  transform: rotate(0);
+  right: 1px;
+  transform: rotate(180deg);
 }

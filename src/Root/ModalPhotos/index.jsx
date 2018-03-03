@@ -33,7 +33,11 @@ export default class extends Component{
       />
       <div className={styles.content}>
         <Slider
+          className={styles.slider}
+          cardClassName={styles.sliderCard}
           imgs={data.photos}
+          arrowRightClassName={styles.arrowRight}
+          arrowLeftClassName={styles.arrowLeft}
         />
       </div>
     </div>

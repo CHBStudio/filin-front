@@ -1,6 +1,10 @@
 import styles from './styles.scss';
 
 
-export default ({ imgUrl }) => {
-  return <div className={styles.root} style={{ backgroundImage: `url(${imgUrl})` }}/>
+export default ({ imgUrl, className }) => {
+  return <div
+    className={cn(styles.root, className)}
+    style={{ backgroundImage: `url(${imgUrl})`
+    }}
+  />
 }

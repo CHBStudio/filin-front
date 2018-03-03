@@ -7,6 +7,8 @@
   height: 100%;
   width: 100%;
   z-index: 10000000000;
+  min-height: $page-height-desktop-min;
+  min-width: $page-width-desktop-min;
 
   background-color: rgba(0,0,0, .85);
 
@@ -27,8 +29,32 @@
 .content{
   display: block;
   position: absolute;
-  height: calc(100% - #{$indent-big * 2});
+  height: 100%;
   width: calc(100% - #{$indent-big * 2});
-  top: $indent-big;
+  top: 0;
   left: $indent-big;
+}
+
+.slider {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sliderCard{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+}
+
+.arrowRight{
+  left: -#{$indent-big - $indent-normal};
+}
+
+.arrowLeft{
+  right: -#{$indent-big - $indent-normal};
 }
