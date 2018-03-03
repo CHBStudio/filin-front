@@ -27,7 +27,7 @@ export default () => {
     </div>
 
     <div className={styles.mapWrapper}>
-      <Map state={mapState} width='100%' height="100%" onMapAvailable={ref => console.warn(ref.behaviors.disable('scrollZoom'))} center={[55.754734, 37.583314]} zoom={18}>
+      <Map state={mapState} width='100%' height="100%" onMapAvailable={ref => ref.behaviors.disable('scrollZoom')} center={[55.754734, 37.583314]} zoom={18}>
         <Marker lat={55.754734} lon={37.583314} />
       </Map>
     </div>

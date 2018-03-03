@@ -13,13 +13,18 @@ export default ({ data, title, linkTo, buttonText }) => {
 
     <div className={styles.topBar}>
       <Title className={styles.title}>{title}</Title>
-      <Button className={styles.btn}>{ buttonText }</Button>
+      <Button
+        className={styles.btn}
+        onClick={() => history.push(linkTo)}
+      >
+        { buttonText }
+      </Button>
     </div>
 
     <div className={styles.container}>
       { data.map((colData, index) => {
         return <Col
-          index={index}
+          key={index}
           imgUrl={colData.imgUrl}
           title={colData.title}
           text={colData.text}

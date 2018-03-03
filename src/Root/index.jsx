@@ -6,6 +6,7 @@ import Header from './Header';
 import Landing from './Landing';
 import Offers from './Offers';
 import ProductsServices from './ProductsServices';
+import ModalPhotos from './ModalPhotos';
 
 import styles from './styles.scss';
 
@@ -18,6 +19,7 @@ export default class extends Component{
   render(){
 
     return <div className={styles.root}>
+      <ModalPhotos/>
       <Header/>
       <Switch>
         <Route path={urls.landing} render={() => <Landing/>}/>

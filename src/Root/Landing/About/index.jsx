@@ -1,6 +1,8 @@
+import Slider from 'components/Slider';
+
 import BaseScreen from '../components/BaseScreen';
-import Slider from './Slider';
 import Description from './Description';
+import testImgUrl from './img/testImg.jpg';
 
 import styles from './styles.scss';
 
@@ -36,7 +38,14 @@ export default class extends Component{
       className={styles.root}
       css={style}
     >
-      <Slider/>
+      <Slider
+        imgs={[
+          testImgUrl,
+          testImgUrl,
+          testImgUrl,
+          testImgUrl,
+        ]}
+      />
       <Description/>
     </BaseScreen>
   }

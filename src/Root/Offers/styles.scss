@@ -19,7 +19,8 @@
   height: auto;
 }
 
-.error {
+.error,
+.emptyStub{
   display: block;
   position: relative;
   width: 100%;
@@ -27,6 +28,12 @@
   font-size: $font-size-normal-big;
   margin: $indent-normal auto;
   color: #f00;
+
+  @include selectable;
+}
+
+.emptyStub{
+  color: $color-black;
 }
 
 .spinner {

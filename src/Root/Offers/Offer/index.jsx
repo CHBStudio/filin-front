@@ -4,11 +4,24 @@ import Title from 'components/Title';
 import styles from './styles.scss';
 
 
-export default ({ img, area, floor, type, cost, block }) => {
+export default ({
+  img,
+  area,
+  floor,
+  type,
+  cost,
+  block,
+  openModalPhotos,
+}) => {
   return <div className={styles.root}>
-    <div className={styles.img} style={{backgroundImage: `url(${img})`}}/>
+    <div
+      className={styles.img}
+      style={{backgroundImage: `url(${img})`}}
+    />
     <div className={styles.info}>
-      <Title className={styles.title}>{ area } м<sup>2</sup>, { floor } этаж</Title>
+      <Title className={styles.title}>
+        { area } м<sup>2</sup>, { floor } этаж
+      </Title>
       <div className={styles.params}>
         <span className={styles.param}>
           Назначение помещения: <b>{ type }</b>
@@ -26,7 +39,12 @@ export default ({ img, area, floor, type, cost, block }) => {
             Корпус: <b>{ block }</b>
           </span>}
       </div>
-      <Button className={styles.btn}>Фотографии</Button>
+      <Button
+        className={styles.btn}
+        onClick={openModalPhotos}
+      >
+        Фотографии
+      </Button>
     </div>
   </div>
 }

@@ -11,6 +11,6 @@ export default ({ area, cost, type, imgUrl }) => {
       <span className={styles.paramLine}>Цена аренды: <b>{cost}</b> ₽</span>
       <span className={styles.paramLine}>Назначение: <b>{type}</b></span>
     </div>
-    <Button className={styles.btn}>Подробнее</Button>
+    <Button className={styles.btn}>Фотографии</Button>
   </div>
 }

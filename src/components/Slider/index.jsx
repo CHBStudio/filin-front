@@ -1,14 +1,13 @@
 import Slider from 'react-slick';
 
 import NavArrow from './NavArrow';
-import Card from './Card';
-import testImgUrl from './img/testImg.jpg';
+import Card from './Card';;
 
 import styles from './styles.scss';
 import './slider.scss';
 
 
-export default () => {
+export default ({ imgs=[] }) => {
   const LeftArrow = NavArrow('left');
   const RightArrow = NavArrow('right');
 
@@ -28,17 +27,10 @@ export default () => {
 
 
   return <Slider {...settings}>
-    <div>
-      <Card imgUrl={testImgUrl}/>
-    </div>
-    <div>
-      <Card imgUrl={testImgUrl}/>
-    </div>
-    <div>
-      <Card imgUrl={testImgUrl}/>
-    </div>
-    <div>
-      <Card imgUrl={testImgUrl}/>
-    </div>
+    { imgs.map((imgUrl, index) => {
+      return <div key={index}>
+        <Card imgUrl={imgUrl}/>
+      </div>;
+    })}
   </Slider>
 }

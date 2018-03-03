@@ -1,3 +1,5 @@
+import urls from 'config/urls';
+
 import Services from '../components/Services';
 
 import testIconUrl from './img/testIcon.svg';
@@ -12,6 +14,6 @@ export default () => {
       { imgUrl: testIconUrl, title: 'Шиномонтаж', text: 'Мы предлагаем вам воспользоваться комплексом шиномонтажных услуг нашей сети магазинов. Шиномонтаж производится на п.' },
       { imgUrl: testIconUrl, title: 'Шиномонтаж', text: 'Мы предлагаем вам воспользоваться комплексом шиномонтажных услуг нашей сети магазинов. Шиномонтаж производится на п.' },
     ]}
-    linkTo="#"
+    linkTo={urls.psServices('all')}
   />
 }
