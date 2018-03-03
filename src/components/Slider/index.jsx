@@ -12,7 +12,8 @@ export default ({
   cardClassName,
   className,
   arrowRightClassName,
-  arrowLeftClassName
+  arrowLeftClassName,
+  fade=false,
 }) => {
   const LeftArrow = NavArrow('left', arrowLeftClassName);
   const RightArrow = NavArrow('right', arrowRightClassName);
@@ -29,7 +30,7 @@ export default ({
     className: cn(styles.slider, className),
     arrows: !window.__IS_MOBILE__,
     swipe: window.__IS_MOBILE__,
-    fade: true,
+    fade,
   };
 
 

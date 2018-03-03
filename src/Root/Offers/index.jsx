@@ -2,7 +2,7 @@ import connect from 'utils/connect'
 import { offers, modals } from 'store';
 import Title from 'components/Title';
 import FirstScreenContainer from 'components/FirstScreenContainer';
-import Spinner from 'components/Spinner';
+import FullSideLoader from 'components/FullSideLoader';
 
 import Offer from './Offer';
 
@@ -30,7 +30,7 @@ export default class extends Component{
       return <FirstScreenContainer className={styles.root}>
         <Title className={styles.title}>Арендаторам</Title>
         <div className={styles.container}>
-          <Spinner className={styles.spinner} />
+          <FullSideLoader/>
         </div>
       </FirstScreenContainer>
     }

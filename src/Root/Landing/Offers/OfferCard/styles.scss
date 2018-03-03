@@ -23,7 +23,7 @@
 .infoContainer{
   display: block;
   position: relative;
-  margin-top: $indent-normal;
+  margin-top: $indent-small;
 }
 
 .paramLine{
@@ -31,8 +31,8 @@
   position: relative;
   height: auto;
   width: 100%;
-  margin-top: $indent-small;
-  font-size: $font-size-normal-big;
+  margin-top: $indent-micro;
+  font-size: $font-size-normal;
   text-align: left;
 
   @include selectable;
@@ -46,5 +46,5 @@
 }
 
 .btn{
-  margin-top: $indent-normal;
+  margin-top: $indent-small;
 }

@@ -10,7 +10,7 @@ import FirstScreenContainer from 'components/FirstScreenContainer';
 import Title from 'components/Title';
 import SwitchComponent from 'components/Switch';
 import request from 'utils/request';
-import Spinner from 'components/Spinner';
+import FullSideLoader from 'components/FullSideLoader';
 
 import Filters from './Filters';
 import Floor from './Floor';
@@ -103,7 +103,7 @@ class ProductsServices extends Component{
 
       { isErrorFilters && <div className={styles.error}>Кажется что-то пошло не так ...</div> }
 
-      { isLoadingFilters && <Spinner className={styles.spinner}/> }
+      { isLoadingFilters && <FullSideLoader/> }
 
       { isLoadedFilters && <div className={styles.topControls}>
         <SwitchComponent
@@ -116,7 +116,7 @@ class ProductsServices extends Component{
       { isLoadedFilters && <div className={styles.container}>
         <div className={styles.sides}>
           <div className={styles.leftSide}>
-            { isLoading && <Spinner className={styles.spinner}/> }
+            { isLoading && <FullSideLoader/> }
             { !isLoading && items.map((floorData, index) => {
               return <Floor data={floorData} key={index}/>;
             }) }

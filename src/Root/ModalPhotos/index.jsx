@@ -38,6 +38,7 @@ export default class extends Component{
           imgs={data.photos}
           arrowRightClassName={styles.arrowRight}
           arrowLeftClassName={styles.arrowLeft}
+          fade={true}
         />
       </div>
     </div>

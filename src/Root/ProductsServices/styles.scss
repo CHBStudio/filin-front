@@ -52,16 +52,6 @@
   vertical-align: top;
 }
 
-.spinner{
-  display: block;
-  position: relative;
-  height: $size-big;
-  width: $size-big;
-  margin: $indent-big auto;
-
-  transition: opacity $anim-normal, pointer-events $anim-normal;
-}
-
 .error{
   display: block;
   position: relative;
