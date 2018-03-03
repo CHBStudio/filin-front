@@ -8,13 +8,13 @@ export default ({ img, area, floor, type, cost, block }) => {
   return <div className={styles.root}>
     <div className={styles.img} style={{backgroundImage: `url(${img})`}}/>
     <div className={styles.info}>
-      <Title className={styles.title}>{ area } м2, { floor } этаж</Title>
+      <Title className={styles.title}>{ area } м<sup>2</sup>, { floor } этаж</Title>
       <div className={styles.params}>
         <span className={styles.param}>
           Назначение помещения: <b>{ type }</b>
         </span>
         <span className={styles.param}>
-          Площадь: <b>{ area } м2</b>
+          Площадь: <b>{ area } м<sup>2</sup></b>
         </span>
         <span className={styles.param}>
           Цена аренды помещ./мес: <b>{ cost } ₽</b>

@@ -36,6 +36,14 @@
   margin-bottom: $indent-normal;
 
   @include selectable;
+
+  sup{
+    font-weight: inherit;
+    font-size: auto;
+    font-family: inherit;
+
+    @include selectable;
+  }
 }
 
 .params{
@@ -55,6 +63,12 @@
     font-weight: bold;
     font-size: $font-size-normal-big;
     margin-left: $indent-micro;
+
+    @include selectable;
+  }
+
+  sup{
+    font-weight: inherit;
 
     @include selectable;
   }

@@ -11,7 +11,7 @@
   text-align: right;
   line-height: $font-size-normal;
 
-  @include screen(1000px){
+  @include width(1000px){
     right: $indent-small;
   }
 }

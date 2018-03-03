@@ -3,7 +3,7 @@
 
 .root{
   display: block;
-  position: relative;
-  widht: 100%;
+  position: fixed;
+  width: $right-bar-width;
   height: auto;
 }

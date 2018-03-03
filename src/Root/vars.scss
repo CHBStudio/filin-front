@@ -56,10 +56,22 @@ $right-bar-width: 250px;
 $list-max-width: 1000px;
 
 
-@mixin screen($max-width) {
+@mixin width($max-width) {
     @media only screen and (max-width: $max-width) {
       @content
     }
+}
+
+@mixin height($max-height) {
+  @media only screen and (max-height: $max-height) {
+    @content
+  }
+}
+
+@mixin mobile(){
+  :global(.__IS_MOBILE__) & {
+    @content
+  }
 }
 
 @mixin selectable(){

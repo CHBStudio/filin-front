@@ -9,7 +9,7 @@
   top: $indent-normal;
   left: $indent-normal;
 
-  @include screen(1000px){
+  @include width(1000px){
     left: $indent-small;
   }
 }

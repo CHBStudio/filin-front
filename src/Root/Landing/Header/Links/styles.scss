@@ -9,13 +9,13 @@
   height: auto;
   width: auto;
 
-  @include screen(1000px){
+  @include width(1000px){
     right: $indent-small;
   }
 }
 
 .link{
-  @include screen(1160px){
+  @include width(1160px){
     font-size: $font-size-small;
     margin-right: $indent-small;
   }
