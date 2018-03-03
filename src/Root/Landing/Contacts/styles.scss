@@ -43,5 +43,6 @@
   @include mobile{
     left: -$indent-small;
     width: calc(100% + #{$indent-small * 2});
+    height: 300px;
   }
 }

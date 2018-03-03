@@ -33,7 +33,7 @@ export default () => {
           settings.coord.lat,
           settings.coord.lon
         ]}
-        zoom={18}
+        zoom={window.__IS_MOBILE__ ? 16 : 18}
       >
         <Marker
           lat={settings.coord.lat}

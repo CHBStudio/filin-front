@@ -38,7 +38,7 @@ export default class extends Component{
           imgs={data.photos}
           arrowRightClassName={styles.arrowRight}
           arrowLeftClassName={styles.arrowLeft}
-          fade={true}
+          fade={!window.__IS_MOBILE__}
         />
       </div>
     </div>

@@ -20,7 +20,7 @@ export default ({
 
   const settings = {
     slidesToShow: 1,
-    autoplay: true,
+    autoplay: !window.__IS_MOBILE__,
     pauseOnHover: true,
     centerMode: true,
     centerPadding: '0',

@@ -18,12 +18,24 @@
     opacity: 0;
     pointer-events: none;
   }
+
+  @include mobile{
+    min-height: 100%;
+    min-width: 100%;
+  }
 }
 
 .closeBtn{
   top: $indent-normal;
   right: $indent-normal;
   z-index: 1;
+
+  @include mobile{
+    top: $indent-small;
+    right: $indent-small;
+    height: $size-small;
+    width: $size-small;
+  }
 }
 
 .content{
@@ -33,6 +45,11 @@
   width: calc(100% - #{$indent-big * 2});
   top: 0;
   left: $indent-big;
+
+  @include mobile{
+    left: 0;
+    width: 100%;
+  }
 }
 
 .slider {
