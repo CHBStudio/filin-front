@@ -120,6 +120,7 @@ class ProductsServices extends Component{
             { !isLoading && items.map((floorData, index) => {
               return <Floor data={floorData} key={index}/>;
             }) }
+            { !isLoading && items.length === 0 && <span className={styles.emptyStub}>Ничего не найдено, попробуйте другие категорию</span> }
           </div>
           <div className={styles.rightSide}>
             <Filters

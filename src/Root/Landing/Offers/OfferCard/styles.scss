@@ -7,6 +7,11 @@
   width: calc(100%/3 - #{$indent-normal * 2});
   margin: $indent-big $indent-normal 0 $indent-normal;
   text-align: left;
+
+  @include width(1300px) {
+    width: calc(100%/3 - #{$indent-small * 2});
+    margin: $indent-big $indent-small 0 $indent-small;
+  }
 }
 
 .img{

@@ -1,5 +1,3 @@
-import propTypes from 'prop-types';
-
 import About from './About';
 import Services from './Services';
 import Products from './Products';

@@ -6,6 +6,8 @@
   position: relative;
   margin-top: $indent-micro;
   color: $color-white;
+
+  @include selectable;
 }
 
 .title{
@@ -14,4 +16,6 @@
   margin-right: $indent-micro;
   color: $color-white;
   vertical-align: top;
+
+  @include selectable;
 }

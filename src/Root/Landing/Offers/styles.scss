@@ -26,4 +26,9 @@
   left: -$indent-normal;
   width: calc(100% + #{$indent-normal * 2});
   text-align: center;
+
+  @include width(1300px) {
+    left: -$indent-small;
+    width: calc(100% + #{$indent-small * 2});
+  }
 }

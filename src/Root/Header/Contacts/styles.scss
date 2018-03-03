@@ -4,15 +4,14 @@
 .root{
   display: block;
   position: absolute;
-  bottom: $indent-normal;
-  right: $indent-normal;
   height: auto;
   width: auto;
-  text-align: right;
-  line-height: $font-size-normal;
+  top: $indent-normal;
+  left: $indent-normal;
+  text-align: left;
 
   @include width(1000px){
-    right: $indent-small;
+    left: $indent-small;
   }
 }
 
@@ -23,8 +22,21 @@
   height: auto;
   width: auto;
   color: $color-yellow;
-  font-size: $font-size-small;
-  margin-left: $indent-small;
+  font-size: $font-size-normal;
+  margin-right: $indent-normal;
+  margin-bottom: $indent-small;
+
+  transition: color $anim-normal;
+  cursor: pointer;
+
+  &:hover{
+    color: $color-white;
+  }
+
+  @include width(1160px){
+    font-size: $font-size-small;
+    margin-right: $indent-small;
+  }
 
   @include selectable;
 }

@@ -5,6 +5,10 @@
   display: block;
   position: relative;
   padding: $indent-normal $indent-big;
+
+  @include width(1200px){
+    padding: $indent-normal;
+  }
 }
 
 .title{
