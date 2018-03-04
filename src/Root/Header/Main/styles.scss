@@ -30,6 +30,8 @@
   background-color: transparent;
   margin: 0 auto $indent-small auto;
 
+  cursor: pointer;
+
   @include mobile{
     margin: 0 auto;
     width: 65px;

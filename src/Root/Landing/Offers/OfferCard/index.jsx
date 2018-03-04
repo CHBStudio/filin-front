@@ -17,7 +17,7 @@ const OfferCard = ({ data, actions }) => {
     <div className={styles.infoContainer}>
       <span className={styles.paramLine}>Этаж: <b>{data.floor}</b></span>
       <span className={styles.paramLine}>Площадь: <b>{data.square}</b> м<sup>2</sup></span>
-      <span className={styles.paramLine}>Назначение: <b>{data.function}</b></span>
+      { data.function && <span className={styles.paramLine}>Назначение: <b>{data.function}</b></span> }
       <span className={styles.paramLine}>Цена аренды: <b>{data.cost}</b> ₽</span>
     </div>
     <Button

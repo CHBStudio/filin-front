@@ -23,9 +23,9 @@ export default ({
         { area } м<sup>2</sup>, { floor } этаж
       </Title>
       <div className={styles.params}>
-        <span className={styles.param}>
+        { type && <span className={styles.param}>
           Назначение помещения: <b>{ type }</b>
-        </span>
+        </span> }
         <span className={styles.param}>
           Площадь: <b>{ area } м<sup>2</sup></b>
         </span>
