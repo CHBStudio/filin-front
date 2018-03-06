@@ -10,9 +10,12 @@ export default () => {
     title="Услуги"
     buttonText="Все услуги"
     data={[
-      { imgUrl: testIconUrl, title: 'Шиномонтаж', text: 'Мы предлагаем вам воспользоваться комплексом шиномонтажных услуг нашей сети магазинов. Шиномонтаж производится на п.' },
-      { imgUrl: testIconUrl, title: 'Шиномонтаж', text: 'Мы предлагаем вам воспользоваться комплексом шиномонтажных услуг нашей сети магазинов. Шиномонтаж производится на п.' },
-      { imgUrl: testIconUrl, title: 'Шиномонтаж', text: 'Мы предлагаем вам воспользоваться комплексом шиномонтажных услуг нашей сети магазинов. Шиномонтаж производится на п.' },
+      { imgUrl: testIconUrl, title: 'Шиномонтаж грузовой/легковой', },
+      { imgUrl: testIconUrl, title: 'Установка и настройка тахографов', },
+      { imgUrl: testIconUrl, title: 'Автомойка легковая', },
+      { imgUrl: testIconUrl, title: 'Автосервис легковой', },
+      { imgUrl: testIconUrl, title: 'Складские услуги', },
+      { imgUrl: testIconUrl, title: 'Кафе и Душ', },
     ]}
     linkTo={urls.psServices('all')}
   />

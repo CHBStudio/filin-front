@@ -6,6 +6,7 @@
   position: relative;
   width: calc(100%/3 - #{$indent-normal * 2});
   margin: $indent-big $indent-normal 0 $indent-normal;
+  vertical-align: top;
 
   @include mobile{
     display: block;
@@ -29,9 +30,11 @@
 .text{
   display: block;
   position: relative;
-  width: 100%;
+  width: 80%;
+  left: 10%;
   margin-top: $indent-small;
   text-align: center;
+  font-size: 30px;
 }
 
 .text{

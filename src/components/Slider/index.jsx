@@ -28,7 +28,7 @@ export default ({
     prevArrow: <RightArrow/>,
     nextArrow: <LeftArrow/>,
     className: cn(styles.slider, className),
-    arrows: !window.__IS_MOBILE__,
+    arrows: !window.__IS_MOBILE__ && imgs.length > 1,
     swipe: window.__IS_MOBILE__,
     fade,
   };

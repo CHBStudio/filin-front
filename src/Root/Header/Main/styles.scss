@@ -5,9 +5,9 @@
   display: block;
   position: absolute;
   top: $indent-small;
-  width: 350px;
+  width: 450px;
   height: auto;
-  left: calc(50% - 350px/2);
+  left: calc(50% - 450px/2);
 
   @include mobile{
     position: relative;
