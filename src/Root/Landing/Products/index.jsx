@@ -10,9 +10,12 @@ export default () => {
     title="Товары"
     buttonText="Все товары"
     data={[
-      { imgUrl: testIconUrl, title: 'Масла и расходные материалы', text: 'Мы предлагаем вам воспользоваться комплексом шиномонтажных услуг нашей сети магазинов. Шиномонтаж производится на п.' },
-      { imgUrl: testIconUrl, title: 'Масла и расходные материалы', text: 'Мы предлагаем вам воспользоваться комплексом шиномонтажных услуг нашей сети магазинов. Шиномонтаж производится на п.' },
-      { imgUrl: testIconUrl, title: 'Масла и расходные материалы', text: 'Мы предлагаем вам воспользоваться комплексом шиномонтажных услуг нашей сети магазинов. Шиномонтаж производится на п.' },
+      { imgUrl: testIconUrl, title: 'Запчасти грузовые', },
+      { imgUrl: testIconUrl, title: 'Запчасти легковые', },
+      { imgUrl: testIconUrl, title: 'Масла', },
+      { imgUrl: testIconUrl, title: 'Аксессуары', },
+      { imgUrl: testIconUrl, title: 'Шины', },
+      { imgUrl: testIconUrl, title: 'Аккумуляторы', },
     ]}
     linkTo={urls.psProducts('all')}
   />

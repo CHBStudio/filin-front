@@ -2,7 +2,7 @@ import Slider from 'components/Slider';
 
 import BaseScreen from '../components/BaseScreen';
 import Description from './Description';
-import testImgUrl from './img/testImg.jpg';
+import img1 from './img/img1.jpg';
 
 import styles from './styles.scss';
 
@@ -40,10 +40,7 @@ export default class extends Component{
     >
       <Slider
         imgs={[
-          testImgUrl,
-          testImgUrl,
-          testImgUrl,
-          testImgUrl,
+          img1,
         ]}
         cardClassName={styles.sliderCard}
       />
