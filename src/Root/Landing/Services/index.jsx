@@ -20,15 +20,15 @@ export default () => {
     title="Услуги"
     buttonText="Все услуги"
     data={[
-      { imgUrl: wheelIcon, title: 'Грузовой и легковой шиномонтаж', iconClassName: styles.wheel},
-      { imgUrl: tachogrpaphIcon, title: 'Установка и настройка тахографов', iconClassName: styles.tachogrpaph},
-      { imgUrl: stockIcon, title: 'Складские услуги', iconClassName: styles.stock},
-      { imgUrl: repairCarsIcon, title: 'Автосервис легковой', iconClassName: styles.repairCars},
-      { imgUrl: insuranceIcon, title: 'Страхование', iconClassName: styles.insurance},
-      { imgUrl: carWashIcon, title: 'Автомойка легковая', iconClassName: styles.carWash},
-      { imgUrl: logisticsIcon, title: 'Логистика', iconClassName: styles.logistics},
-      { imgUrl: fuelIcon, title: 'Ремонт и настройка топливной аппаратуры', iconClassName: styles.fuel},
-      { imgUrl: showerCoffeIcon, title: 'Кафе и Душ', iconClassName: styles.showerCoffe},
+      { imgUrl: wheelIcon, title: 'Грузовой и легковой шиномонтаж', iconClassName: styles.wheel, url: urls.psServices(2)},
+      { imgUrl: tachogrpaphIcon, title: 'Установка и настройка тахографов', iconClassName: styles.tachogrpaph, url: urls.psServices(8)},
+      { imgUrl: stockIcon, title: 'Складские услуги', iconClassName: styles.stock, url: urls.psServices(9)},
+      { imgUrl: repairCarsIcon, title: 'Автосервис легковой', iconClassName: styles.repairCars, url: urls.psServices(10)},
+      { imgUrl: insuranceIcon, title: 'Страхование', iconClassName: styles.insurance, url: urls.psServices(11)},
+      { imgUrl: carWashIcon, title: 'Автомойка легковая', iconClassName: styles.carWash, url: urls.psServices(12)},
+      { imgUrl: logisticsIcon, title: 'Логистика', iconClassName: styles.logistics, url: urls.psServices(13)},
+      { imgUrl: fuelIcon, title: 'Ремонт и настройка топливной аппаратуры', iconClassName: styles.fuel, url: urls.psServices(14)},
+      { imgUrl: showerCoffeIcon, title: 'Кафе и Душ', iconClassName: styles.showerCoffe, url: urls.psServices(15)},
     ]}
     linkTo={urls.psServices('all')}
   />

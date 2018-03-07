@@ -8,10 +8,24 @@
   margin: $indent-big $indent-normal 0 $indent-normal;
   vertical-align: top;
 
+  cursor: pointer;
+
+  &:hover{
+    .img{
+      transform: scale(1.1);
+    }
+  }
+
   @include mobile{
     display: block;
     width: 100%;
     margin: $indent-normal 0 0 0;
+
+    &:hover{
+      .img{
+        transform: none;
+      }
+    }
   }
 }
 
@@ -24,6 +38,8 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;
+
+  transition: transform $anim-normal;
 }
 
 .title,

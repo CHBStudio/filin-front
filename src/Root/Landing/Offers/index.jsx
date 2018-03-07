@@ -28,6 +28,10 @@ export default class extends Component{
     const isLoading = status === 'loading';
     const isLoaded = status === 'loaded';
 
+    if(isLoaded && data.length === 0){
+      return null;
+    }
+
     return <BaseScreen className={styles.root}>
       <Title className={styles.title}>Арендаторам</Title>
       { !window.__IS_MOBILE__ && <Button

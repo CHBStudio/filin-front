@@ -1,10 +1,14 @@
 import Title from 'components/Title';
+import history from 'utils/history';
 
 import styles from './styles.scss';
 
 
-export default ({ imgUrl, title, text, iconClassName }) => {
-  return <div className={styles.root}>
+export default ({ imgUrl, title, text, iconClassName, url }) => {
+  return <div
+    className={styles.root}
+    onClick={() => history.push(url)}
+  >
     <div
       className={cn(
         styles.img,
