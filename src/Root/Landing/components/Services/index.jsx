@@ -29,6 +29,7 @@ export default ({ data, title, linkTo, buttonText }) => {
           imgUrl={colData.imgUrl}
           title={colData.title}
           text={colData.text}
+          iconClassName={colData.iconClassName}
         />
       }) }
       { window.__IS_MOBILE__ && <Button
