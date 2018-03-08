@@ -1,5 +1,5 @@
 export default {
-  email: 'hello@tsk-filin.ru',
+  email: 'ooo_filin@bk.ru',
   phone: '+7 (498) 657-26-00',
   address: 'МКАД, 23-й километр, внешняя сторона, вл3к1',
   coord: {
