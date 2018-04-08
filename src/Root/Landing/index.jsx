@@ -1,6 +1,7 @@
 import About from './About';
-import Services from './Services';
 import Products from './Products';
+import Services from './Services';
+import Description from './Description';
 import Offers from './Offers';
 import Contacts from './Contacts';
 
@@ -21,8 +22,9 @@ export default class extends Component{
     return <div className={styles.root}>
       <div className={styles.screensContainer}>
         <About/>
-        <Services/>
         <Products/>
+        <Services/>
+        <Description/>
         <Offers/>
         <Contacts/>
       </div>

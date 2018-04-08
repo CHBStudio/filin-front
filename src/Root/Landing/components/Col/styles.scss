@@ -5,7 +5,7 @@
   display: inline-block;
   position: relative;
   width: calc(100%/3 - #{$indent-normal * 2});
-  margin: $indent-big $indent-normal 0 $indent-normal;
+  margin: $indent-normal $indent-normal 0 $indent-normal;
   vertical-align: top;
 
   cursor: pointer;

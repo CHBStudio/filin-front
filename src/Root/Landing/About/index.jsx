@@ -1,7 +1,6 @@
 import Slider from 'components/Slider';
 
 import BaseScreen from '../components/BaseScreen';
-import Description from './Description';
 import img1 from './img/img1.jpg';
 
 import styles from './styles.scss';
@@ -16,17 +15,17 @@ export default class extends Component{
     }
   }
 
-  resizeListener = () => {
-    this.setState({ windowHeight: window.innerHeight });
-  };
-
-  componentWillMount(){
-    window.addEventListener('resize', this.resizeListener);
-  }
-
-  componentDidMount(){
-    this.resizeListener();
-  }
+  // resizeListener = () => {
+  //   this.setState({ windowHeight: window.innerHeight });
+  // };
+  //
+  // componentWillMount(){
+  //   window.addEventListener('resize', this.resizeListener);
+  // }
+  //
+  // componentDidMount(){
+  //   this.resizeListener();
+  // }
 
   render(){
 
@@ -36,7 +35,7 @@ export default class extends Component{
 
     return <BaseScreen
       className={styles.root}
-      css={style}
+      // css={style}
     >
       <Slider
         imgs={[
@@ -44,11 +43,10 @@ export default class extends Component{
         ]}
         cardClassName={styles.sliderCard}
       />
-      <Description/>
     </BaseScreen>
   }
 
-  componentWillUnmount(){
-    window.removeEventListener('resize', this.resizeListener);
-  }
+  // componentWillUnmount(){
+  //   window.removeEventListener('resize', this.resizeListener);
+  // }
 }
