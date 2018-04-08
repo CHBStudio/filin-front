@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Router } from 'react-router-dom';
 import 'babel-polyfill';
 
@@ -11,33 +11,12 @@ import checkIsMobile from 'utils/checkIsMobile';
 import Root from './Root';
 
 
-let store = null;
+const middleware = applyMiddleware(...storeScheme.sagas);
+const store = createStore(
+  storeScheme.reducers,
+  middleware
+);
 
-if (false) {
-  const middleware = applyMiddleware(...storeScheme.sagas);
-  store = createStore(
-    storeScheme.reducers,
-    middleware
-  );
-} else {
-  const middleware = applyMiddleware(...storeScheme.sagas);
-
-  let enhancer;
-
-  if (window.__REDUX_DEVTOOLS_EXTENSION__) {
-    enhancer = compose(
-      middleware,
-      window.__REDUX_DEVTOOLS_EXTENSION__()
-    );
-  } else {
-    enhancer = compose(middleware);
-  }
-
-  store = createStore(
-    storeScheme.reducers,
-    enhancer
-  );
-}
 
 const isMobile = checkIsMobile();
 window.__IS_MOBILE__ = isMobile;

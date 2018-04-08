@@ -5,7 +5,7 @@
   "main": "-",
   "scripts": {
     "start": "node devServer.js",
-    "build": "rimraf ./build && parcel build ./src/index.html --out-dir build/static --public-url /static"
+    "build": "rimraf ./build && NODE_ENV=production parcel build ./src/index.html --out-dir build/static --public-url /static"
   },
   "repository": {
     "type": "git",
