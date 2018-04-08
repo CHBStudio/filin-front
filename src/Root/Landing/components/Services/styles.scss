@@ -19,6 +19,13 @@
   margin-right: $indent-normal;
   vertical-align: top;
   font-size: $font-size-giant;
+
+  @include mobile{
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
 }
 
 .btn{
@@ -27,7 +34,7 @@
   @include mobile{
     height: $size-big;
     line-height: $size-big;
-    margin-top: $indent-big;
+    margin-top: $indent-small-normal;
   }
 }
 

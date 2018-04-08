@@ -14,6 +14,6 @@
   }
 
   @include mobile{
-    padding: $indent-small;
+    padding: $indent-normal $indent-small;
   }
 }
