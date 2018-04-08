@@ -29,8 +29,7 @@
   position: relative;
   height: auto;
   margin: $indent-normal auto 0 auto;
-  width: 80%;
-  max-width: $list-max-width;
+  width: 100%;
   min-width: calc(#{$page-width-desktop-min} - #{$indent-big * 2});
 
   @include mobile{
@@ -50,9 +49,9 @@
 .leftSide{
   display: inline-block;
   position: relative;
-  width: calc(100% - #{$right-bar-width + $indent-big});
+  width: calc(100% - #{$right-bar-width + $indent-normal});
   vertical-align: top;
-  margin-right: $indent-big;
+  //margin-right: $indent-normal;
 
   @include mobile{
     display: block;

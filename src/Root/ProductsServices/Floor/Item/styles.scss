@@ -2,14 +2,32 @@
 
 
 .root{
-  display: block;
+  display: inline-block;
   position: relative;
-  width: 100%;
   height: auto;
   margin-top: $indent-small;
   background-color: $color-black;
   padding: $indent-small;
   border-radius: $border-radius;
+  vertical-align: top;
+  width: calc(100%/3 - #{$indent-normal});
+  margin-right: $indent-normal;
+  min-height: 500px;
+
+  @include width(1450px){
+    width: calc(100%/2 - #{$indent-normal});
+    min-height: 400px;
+  }
+
+  @include width(1250px){
+    width: calc(100% - #{$indent-normal});
+    min-height: 0;
+  }
+
+  @include mobile{
+    margin-right: 0;
+    width: 100%;
+  }
 }
 
 .title{
